@@ -3,4 +3,4 @@
 
 ## Screenshot of Green_Plains
 
-![](pic.PNG)
+![](pic.png)
