@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 360 Degree GALLERY</title>
+    </head>
+    <body>
+
+        <!-- Include the Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.min.js"></script>
+        <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
+
+        <a-scene>
+
+           <!-- the images to the gallery -->
+            <a-assets>
+                <img id="logo" src="https://aframe.io/images/blog/introducing-aframe.png">
+                 <img id="alogo" src="https://pbs.twimg.com/profile_images/435457795580628992/6Zhr4hkm_400x400.png">
+                  <img id="blogo" src="https://gigaom.com/wp-content/uploads/sites/1/2012/04/aframe.jpg">
+                <img id="clogo" src="https://avatars3.githubusercontent.com/u/16024092?v=3&s=400">
+
+
+                
+            </a-assets>
+
+            
+            <a-entity text="value: 360 degree GALLERY;" position="13.65 5.79 -19.10" scale="50 55 18"></a-entity>
+
+           
+            <a-entity layout="type: circle; radius: 10" position="0 0.5 0">
+
+                
+                <a-animation attribute="rotation" dur="30000" easing="linear" repeat="indefinite" to="0 360 0"></a-animation>
+
+                <!-- The projected images -->
+                <a-image height="3" width="3"  src="#clogo" transparent="true"></a-image>
+                <a-image height="3" width="3"  src="#alogo" transparent="true"></a-image>
+                <a-image height="3" width="3"  src="#blogo" transparent="true"></a-image>
+                <a-image height="3" width="3"  src="#logo" transparent="true"></a-image>
+                <a-image height="3" width="3"  src="#alogo" transparent="true"></a-image>
+                <a-image height="3" width="3"  src="#logo" transparent="true"></a-image>
+                <a-image height="3" width="3"  src="#clogo" transparent="true"></a-image>
+                <a-image height="3" width="3"  src="#blogo" transparent="true"></a-image>
+                <a-image height="3" width="3" src="#logo" transparent="true"></a-image>
+                <a-image height="3" width="3"  src="#clogo" transparent="true"></a-image>
+
+            </a-entity>
+            
+           
+            <a-camera id="camera" position="0 1.8 0"></a-camera>
+
+           
+            <a-sky color="#ef2d5e"></a-sky>
+
+        </a-scene>
+
+    </body>
+</html>
